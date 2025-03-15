@@ -8,8 +8,8 @@ app = FastAPI(
     title="Conciliador Bancário API",
     description="API para processar e conciliar extratos bancários.",
     version="1.0",
-    docs_url="/docs",
-    redoc_url="/redoc"
+    docs_url="/docs",  # Habilita a documentação no Swagger
+    redoc_url="/redoc"  # Habilita a documentação no Redoc
 )
 
 
