@@ -4,7 +4,14 @@ import pandas as pd
 import re
 import io
 
-app = FastAPI()
+app = FastAPI(
+    title="Conciliador Bancário API",
+    description="API para processar e conciliar extratos bancários.",
+    version="1.0",
+    docs_url="/docs",
+    redoc_url="/redoc"
+)
+
 
 @app.post("/processar_extrato/")
 async def processar_extrato(file: UploadFile = File(...)):
